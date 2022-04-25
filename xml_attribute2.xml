@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--FOR WELL-FORMED/VALID XML-->
+<!DOCTYPE Top-Resto [
+    <!ELEMENT Top-Resto (Menu)>
+    <!ELEMENT Menu (restaurant, Menu, Price, Ratings, location)>
+    <!ELEMENT location (exact-location)>
+
+    <!ELEMENT restaurant (#PCDATA)>
+    <!ELEMENT Menu (#PCDATA)>
+    <!ELEMENT Price (#PCDATA)>
+    <!ELEMENT Ratings (#PCDATA)>
+    <!ELEMENT location (#PCDATA)>
+        <!ELEMENT exact-location (#PCDATA)>
+
+    <!ATTLIST Menu id CDATA #REQUIRED>
+    <!ATTLIST restaurant name CDATA #REQUIRED>
+    <!ATTLIST shop name CDATA #REQUIRED>
+     <!ATTLIST Menu category CDATA #REQUIRED>
+]>
+<Top-Resto>
+    <Menu id="viand">
+        <restaurant name="The great Chief"></restaurant>
+        <Menu category="viand"> Menudo </Menu>
+        <Price>500.00</Price>
+        <Ratings> 4 out of 5 </Ratings>
+        <location> Makati City </location>
+            <exact-location> Ayala Triangle Garden</exact-location>
+    </Menu>
+
+    <Menu id="drinks">
+        <restaurant name="Bubble Tea"></restaurant>
+        <Menu category="Tea"> Milk Tea </Menu>
+        <Price>
+            <small> P80.00 </small>
+            <medium> P120.00 </medium>
+            <large> P150.00 </large>
+        </Price>
+        <Ratings> 5 out of 5 </Ratings>
+        <location> Antipolo City </location>
+            <exact-location> Green Hills</exact-location>
+    </Menu>
+
+    <Menu id="street foods">
+        <shop name="Tuhog sa Kumukulong Mantika"></shop>
+        <Menu category="street-foods"> Ihaw Ihaw at tuhog-tuhog </Menu>
+        <Price> Price starts at P1.00 to P20.00</Price>
+        <Ratings> 4.4 out of 5 </Ratings>
+        <location> Quezon City</location>
+            <exact-location> Near UP Main Campus</exact-location>
+    </Menu>
+</Top-Resto>
